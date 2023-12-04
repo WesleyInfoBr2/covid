@@ -13,7 +13,7 @@ import streamlit as st
 
 
 df = pd.read_csv('covid-variants.csv')
-df['date'] = pd.to_datetime(df['date'], format='%d-%m-%Y')
+df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
 
 # criar lista única de países e variantes, que será utilizado nos filtros
 paises = list(df['location'].unique())
